@@ -1,27 +1,3 @@
-// // import { Citizen } from "./citizen";
-// const {Citizen}= require('./citizen.js');
-
-
-// // Importing data from db.json (assuming it contains valid JSON)
-// const data = require('./db.json');
-
-// console.log(data);
-
-
-
-
-
-
-
-
-
-// let resident1 = new Citizen("sasha",26);
-// resident1.addAddress("Gauteng");
-// resident1.getDetails();
-
-// console.log(resident1.getDetails.toString``)
-
-
 
 
 
@@ -44,7 +20,7 @@ const fs = require('fs');
 
 function writeData(obj){
 
-    fs.appendFile('./db.json',JSON.stringify(obj),err=>{
+    fs.appendFile('./data.json',JSON.stringify(obj),err=>{
         if(err){
             console.log(err)
         }
@@ -55,7 +31,7 @@ function writeData(obj){
 }
 
 function readData(){
-    fs.readFile('./db.json','utf-8', (err,jsonString) => {
+    fs.readFile('./data.json','utf-8', (err,jsonString) => {
         if(err){
             console.log(err)
         }
